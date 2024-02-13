@@ -1,100 +1,98 @@
-# Tady bude Váš zápočtový program
----
+1. **Messenger Analytics User   Documentation**
+
+    **Introduction:**
+
+    - Messenger Analytics is a Python application that analyzes Facebook Messenger chat logs. It provides insights such as the number of messages sent by each participant, the most common words used, and the moving average of the number of messages over a specified number of days.
+
+    **Requirements:**
+
+    - Python 3.7 or higher
+    - PyQt5
+    - Matplotlib
+    - mplcursors
+
+    **Installation:**
+
+    - pip install PyQt5 matplotlib mplcursors
+
+    **Usage:**
+
+    1. Run the gapp.py script to start the application
+    2. The application will prompt you to select a directory containing your Facebook Messenger chat logs in JSON format.
+    3. Once the directory is selected, the application will analyze the chat logs and display the results in a user-friendly interface.
 
 
 
+    - You can change some of anylysis settings in setting.txt. 
+    moving_average: 30		# you can change the value to change lenght of MA window
+    top_words: 300			# you can change the value to see different number of top words.
+    top_words_minimal_len: 5	# you can change the value to set words which will contribute to top words.
 
+    **Features:**
 
-# student
+    - Conversations and Groups: You can choose to view data for individual conversations or group chats. Select the desired option from the first dropdown menu.
+    Chat Selection: Once you've chosen to view either Conversations or Groups, a list of available chats will be displayed. Click on a chat to view its analytics.
 
+    - Participant Selection: After selecting a chat, you can choose to view data for individual participants. Select the desired participant from the second dropdown menu.
 
+    - Message Count: The application displays the total number of messages sent by each participant.
 
-## Getting started
+    - Most Common Words: The application displays the most common words used by each participant, along with their frequency.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+    - Moving Average of Messages: The application calculates and displays the moving average of the number of messages sent over a specified number of days.
+    Graphs: The application provides two graphs. The first graph shows the number of messages sent per day. The second graph shows the activity of the chat participants by hour.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+    **Support:**
 
-## Add your files
+    - If you need help with the program, you can reach me: david.valek17@gmail.com
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+    **License:**
 
-```
-cd existing_repo
-git remote add origin https://gitlab.mff.cuni.cz/teaching/nprg030/2324-winter/common/student.git
-git branch -M master
-git push -uf origin master
-```
+    GNU GENERAL PUBLIC LICENSE
+    Version 3, 29 June 2007
 
-## Integrate with your tools
+    Copyright (C) 2024 David Válek
 
-- [ ] [Set up project integrations](https://gitlab.mff.cuni.cz/teaching/nprg030/2324-winter/common/student/-/settings/integrations)
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-## Collaborate with your team
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-## Test and Deploy
+    **Disclaimer:**
 
-Use the built-in continuous integration in GitLab.
+    - This application is intended for personal use only. Please respect the privacy of others and do not use this tool to analyze chat logs without the consent of all participants. This application does not send you data anywhere. 
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+    **Project Status:**
 
-***
+    - For now, I consider the program finished. I am not planning to update the program anytime soon.
 
-# Editing this README
+1. **Messenger Analytics Technical Documentation**
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+    **Overview**:
 
-## Suggestions for a good README
+    Messenger Analytics is a Python application designed to analyze Facebook Messenger chat logs. It provides insights such as the number of messages sent by each participant, the most common words used, and the moving average of the number of messages over a specified number of days.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+    **Modules**:
 
-## Name
-Choose a self-explaining name for your project.
+    <details><summary>json_address_handler.py
+    </summary>
+    This module is responsible for handling the addresses of JSON files. It contains functions to select a directory using PyQt5 file manager window, find chat addresses, and sequence JSON addresses.
+    </details>
+    
+    <details><summary>json_core.py
+    </summary>
+    This module contains the core classes and functions for handling and analyzing JSON files. It includes classes for handling JSON files (JsonFile), repairing JSON files (JsonHandler), analyzing JSON files (JsonAnalytics), and storing general data (GeneralData). It also includes functions for storing data to a JSON file (store_data), creating a directory (make_dir), deleting files (delete_files), and the main function (main) that takes care of the entire analysis.  
+    </details>
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+    <details><summary>gapp.py</summary>
+    This module is the main application module. It contains the Data class for handling data and the JsonViewer class for the user interface. The JsonViewer class includes methods for initializing the user interface, updating the information displayed, loading the list widget based on the current selection in the combo box, and handling button click events.
+    </details>
+  
