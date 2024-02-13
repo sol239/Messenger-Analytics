@@ -78,7 +78,7 @@
 
     **Overview**:
 
-    Messenger Analytics is a Python application designed to analyze Facebook Messenger chat logs. It provides insights such as the number of messages sent by each participant, the most common words used, and the moving average of the number of messages over a specified number of days.
+    - Messenger Analytics is a Python application designed to analyze Facebook Messenger chat logs. It provides insights such as the number of messages sent by each participant, the most common words used, and the moving average of the number of messages over a specified number of days.
 
     **Modules**:
 
