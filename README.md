@@ -22,8 +22,8 @@
     3. Once the directory is selected, the application will analyze the chat logs and display the results in a user-friendly interface.
 
 
-
-    - You can change some of anylysis settings in setting.txt. 
+    - If you want to choose different folder, you can click on purple button at top of UI or delete Datas_j folder, or content of the folder.
+    - You can change some of anylysis settings in setting.txt.  In case you change the setting.txt and want to see new data, you have the start new analysis, either by deleting Datas_j folder or clicking on megenta button at top of UI. 
     - - moving_average: 30		# you can change the value to change lenght of MA window
     - - top_words: 300			# you can change the value to see different number of top words.
     - - top_words_minimal_len: 5	# you can change the value to set words which will contribute to top words.
