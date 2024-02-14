@@ -28,7 +28,8 @@
     - - top_words: 300			# you can change the value to see different number of top words.
     - - top_words_minimal_len: 5	# you can change the value to set words which will contribute to top words.
     - You can download your data here: https://accountscenter.facebook.com/info_and_permissions. Select specific type of informations. Select messages. Select data for a specific date range or for your entire Facebook history, and choose the JSON format. After downloading and extracting the .zip file, select the extracted folder (which should be in JSON format) in gapp.py.
-    
+    - The asterisk underscore Sum underscore asterisk tag represents data from all participants. The name of the tag was selected intentionally to be not mismatched with name of participant.
+
     **Features:**
 
     - Conversations and Groups: You can choose to view data for individual conversations or group chats. Select the desired option from the first dropdown menu.
@@ -43,8 +44,7 @@
     - Moving Average of Messages: The application calculates and displays the moving average of the number of messages sent over a specified number of days.
     Graphs: The application provides two graphs. The first graph shows the number of messages sent per day. The second graph shows the activity of the chat participants by hour.
     - General Data Tab: The application calculates all your sent and received messages across your all chat logs excluding groupchats. Graphs in General Data tab show just your activity -> analysis just of messages you sent.
-    - The asterisk underscore Sum underscore asterisk tag represents data from all participants. The name of the tag was selected intentionally to be not mismatched with name of participant.
-
+    
     **Support:**
 
     - If you need help with the program, you can reach me: david.valek17@gmail.com
