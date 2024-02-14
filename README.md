@@ -43,7 +43,7 @@
     - Moving Average of Messages: The application calculates and displays the moving average of the number of messages sent over a specified number of days.
     Graphs: The application provides two graphs. The first graph shows the number of messages sent per day. The second graph shows the activity of the chat participants by hour.
     - General Data Tab: The application calculates all your sent and received messages across your all chat logs excluding groupchats. Graphs in General Data tab show just your activity -> analysis just of messages you sent.
-    - The *_Sum_* tag represents data from all participants. The name of the tag was selected intentionally to be not mismatched with name of participant.
+    - The asterish underscore Sum underscore asterisk tag represents data from all participants. The name of the tag was selected intentionally to be not mismatched with name of participant.
 
     **Support:**
 
