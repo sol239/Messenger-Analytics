@@ -24,10 +24,10 @@
 
 
     - You can change some of anylysis settings in setting.txt. 
-    moving_average: 30		# you can change the value to change lenght of MA window
-    top_words: 300			# you can change the value to see different number of top words.
-    top_words_minimal_len: 5	# you can change the value to set words which will contribute to top words.
-    - You can download your data here: https://accountscenter.facebook.com/info_and_permissions. Selectspecific type of informations. Select messages. Select data for a specific date range or for your entire Facebook history, and choose the JSON format. After downloading and extracting the .zip file, select the extracted folder (which should be in JSON format) in gapp.py.
+    - - moving_average: 30		# you can change the value to change lenght of MA window
+    - - top_words: 300			# you can change the value to see different number of top words.
+    - - top_words_minimal_len: 5	# you can change the value to set words which will contribute to top words.
+    - You can download your data here: https://accountscenter.facebook.com/info_and_permissions. Select specific type of informations. Select messages. Select data for a specific date range or for your entire Facebook history, and choose the JSON format. After downloading and extracting the .zip file, select the extracted folder (which should be in JSON format) in gapp.py.
     
     **Features:**
 
