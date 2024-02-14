@@ -22,6 +22,7 @@
     3. Once the directory is selected, the application will analyze the chat logs and display the results in a user-friendly interface.
 
 
+    - Result of the analysis will be stored in Datas_j folder, which will be created by the program. The next time you run the gapp.py it will open the last analysis.
     - If you want to choose different folder, you can click on purple button at top of UI or delete Datas_j folder, or content of the folder.
     - You can change some of anylysis settings in setting.txt.  In case you change the setting.txt and want to see new data, you have the start new analysis, either by deleting Datas_j folder or clicking on megenta button at top of UI. 
     - - moving_average: 30		# you can change the value to change lenght of MA window
