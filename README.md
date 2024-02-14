@@ -97,11 +97,23 @@
     <details><summary>json_address_handler.py
     </summary>
     This module is responsible for handling the addresses of JSON files. It contains functions to select a directory using PyQt5 file manager window, find chat addresses, and sequence JSON addresses.
+    - def folder_path_pyqt() = Returns the path to the selected directory using PyQt5 file manager window.
+    - def find_chats() = Returns a list of addresses where json chatlogs are located.
+    - def json_addresses() = Main function that returns a dictionary where the key is the name of the person leading the chat and the value is a list of addresses of json chatlogs. A .txt file with settings is also created.
     </details>
     
     <details><summary>json_core.py
     </summary>
     This module contains the core classes and functions for handling and analyzing JSON files. It includes classes for handling JSON files (JsonFile), repairing JSON files (JsonHandler), analyzing JSON files (JsonAnalytics), and storing general data (GeneralData). It also includes functions for storing data to a JSON file (store_data), creating a directory (make_dir), deleting files (delete_files), and the main function (main) that takes care of the entire analysis.  
+    - class JsonHandler = Class that takes care of json file repair. Fixes diacritics and formatting. The argument is a dictionary that is in json_address_handler.py. Contains methods repair_names(),repair_title(), repair_messages()  which repair specific parts of json data.
+    - class JsonFile = Class that takes care of loading json files. The argument is a list of json file addresses. Combines multiple logs into single one. Contains method load_json.
+    - class JsonAnalytics = Class that takes care of chatlog analysis. The argument is a dictionary, which is the result of the JsonFile class and its load_json() method. Contains methods: chat_type() = Decide, whether it is a group chat or a chat between two people. count_messages() = Function that counts the number of messages from individual chat participants. store_data() = Function that stores the results of the analysis in a dictionary.dates() = Function that returns dictionaries with dates, where the key is the participant's name and the value is a list where the first element is a list of dates and the second element is a list of the number of messages. most_words() = Returns a dictionary where the key is the name of the chat participant and the value is a list of words that are sorted by the number of occurrences. n  = is the number of characters that a word must have to be included in the list. length = is the number of words that will be displayed. moving_avarage() = Function that calculates the moving average of the number of messages for n days. The result is stored in a dictionary
+    where the key is the name of the chat participant and the value is a list of dates and the number of messages. 
+    - class GeneralData = Class responsible for computing general data. Contains methods identify() = Function wich will try to identify your name. collect_data() = Function that collects data from all chatlogs and stores them in a dictionary. If include_groups is False, it will only collect data from chatlogs between two people. If include_groups is True, it will collect data from all chatlogs, but this setting is not currently supported. These data will be used for the GeneralData Tab.
+    - def store_data() = Function which stores data to json file.
+    - make_dir() = Function which creates result directory.
+    - delete_files() = Function that deletes all files in the folder.
+    - main() = Main function that takes care of the entire analysis. It returns the results of the analysis.
     </details>
 
     <details><summary>gapp.py</summary>
