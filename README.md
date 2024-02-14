@@ -22,6 +22,8 @@
     3. Once the directory is selected, the application will analyze the chat logs and display the results in a user-friendly interface.
 
 
+    - The top left combobox allows you to choose between two people conversations, groups and general data tab. The top middle button allows you to start the new analysis. The top right combobox allows you to choose whose data you want to show. The asterisk underscore Sum underscore asterisk tag represents data of all participants combined.
+    - The left column shows chatlogs with their number of messages, sorted, the middle column shows acquired informations about the selected chatlog, the right column shows the most common words, sorted.
     - Result of the analysis will be stored in Datas_j folder, which will be created by the program. The next time you run the gapp.py it will open the last analysis.
     - If you want to choose different folder, you can click on purple button at top of UI or delete Datas_j folder, or content of the folder.
     - You can change some of anylysis settings in setting.txt.  In case you change the setting.txt and want to see new data, you have the start new analysis, either by deleting Datas_j folder or clicking on megenta button at top of UI. 
