@@ -18,7 +18,7 @@
     **Usage:**
 
     1. Run the gapp.py script to start the application
-    2. The application will prompt you to select a directory containing your Facebook Messenger chat logs in JSON format.
+    2. The application will prompt you to select a directory containing your Facebook Messenger chat logs in JSON format. The folder you should select is the extraxted folder you downloaded from: https://accountscenter.facebook.com/info_and_permissions
     3. Once the directory is selected, the application will analyze the chat logs and display the results in a user-friendly interface.
 
 
@@ -27,6 +27,7 @@
     moving_average: 30		# you can change the value to change lenght of MA window
     top_words: 300			# you can change the value to see different number of top words.
     top_words_minimal_len: 5	# you can change the value to set words which will contribute to top words.
+    - You can download your data here: https://accountscenter.facebook.com/info_and_permissions. Select data for entire time, or as you wish, and JSON format. After you downloaded the .zip, extract it and this extracted folder should be the one which you select in gapp.py.
 
     **Features:**
 
