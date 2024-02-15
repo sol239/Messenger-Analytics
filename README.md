@@ -116,8 +116,8 @@
     - - moving_avarage() = Function that calculates the moving average of the number of messages for n days. The result is stored in a dictionary
     where the key is the name of the chat participant and the value is a list of dates and the number of messages. 
     - class GeneralData = Class responsible for computing general data. Contains methods_ 
-    - - identify() = Function wich will try to identify your name. 
-    - - collect_data() = Function that collects data from all chatlogs and stores them in a dictionary. If include_groups is False, it will only collect data from chatlogs between two people. If include_groups is True, it will collect data from all chatlogs, but this setting is not currently supported. These data will be used for the GeneralData Tab.
+    - identify() = Function wich will try to identify your name. 
+    - collect_data() = Function that collects data from all chatlogs and stores them in a dictionary. If include_groups is False, it will only collect data from chatlogs between two people. If include_groups is True, it will collect data from all chatlogs, but this setting is not currently supported. These data will be used for the GeneralData Tab.
     - def store_data() = Function which stores data to json file.
     - make_dir() = Function which creates result directory.
     - delete_files() = Function that deletes all files in the folder.
