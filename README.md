@@ -105,6 +105,7 @@
     <details><summary>json_core.py
     </summary>
     This module contains the core classes and functions for handling and analyzing JSON files. It includes classes for handling JSON files (JsonFile), repairing JSON files (JsonHandler), analyzing JSON files (JsonAnalytics), and storing general data (GeneralData). It also includes functions for storing data to a JSON file (store_data), creating a directory (make_dir), deleting files (delete_files), and the main function (main) that takes care of the entire analysis.  
+    
     - class JsonHandler = Class that takes care of json file repair. Fixes diacritics and formatting. The argument is a dictionary that is in json_address_handler.py. Contains methods repair_names(),repair_title(), repair_messages()  which repair specific parts of json data.
     - class JsonFile = Class that takes care of loading json files. The argument is a list of json file addresses. Combines multiple logs into single one. Contains method load_json.
     - class JsonAnalytics = Class that takes care of chatlog analysis. The argument is a dictionary, which is the result of the JsonFile class and its load_json() method. Contains methods: 
