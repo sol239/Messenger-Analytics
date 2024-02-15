@@ -118,5 +118,8 @@
 
     <details><summary>gapp.py</summary>
     This module is the main application module. It contains the Data class for handling data and the JsonViewer class for the user interface. The JsonViewer class includes methods for initializing the user interface, updating the information displayed, loading the list widget based on the current selection in the combo box, and handling button click events.
+
+    - class Data = class which prepares data for gui. Contains methods: filler() = Function to fill the conversations and groups dictionaries. sorter() = Function to sort the conversations and groups by the number of messages.
+    - class JsonViewer(QWidget) = class responsible for GUI. Contains multiple methods handling showing data in comboboxes, graphs, scrollbars and buttons eg. update_graphs() = method which plots graphs. update_comboboxes() = method which updates combobox. etc. 
     </details>
   
