@@ -97,6 +97,7 @@
     <details><summary>json_address_handler.py
     </summary>
     This module is responsible for handling the addresses of JSON files. It contains functions to select a directory using PyQt5 file manager window, find chat addresses, and sequence JSON addresses.
+    
     - def folder_path_pyqt() = Returns the path to the selected directory using PyQt5 file manager window.
     - def find_chats() = Returns a list of addresses where json chatlogs are located.
     - def json_addresses() = Main function that returns a dictionary where the key is the name of the person leading the chat and the value is a list of addresses of json chatlogs. A .txt file with settings is also created.
