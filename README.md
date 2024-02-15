@@ -105,16 +105,16 @@
     <details><summary>json_core.py
     </summary>
     This module contains the core classes and functions for handling and analyzing JSON files. It includes classes for handling JSON files (JsonFile), repairing JSON files (JsonHandler), analyzing JSON files (JsonAnalytics), and storing general data (GeneralData). It also includes functions for storing data to a JSON file (store_data), creating a directory (make_dir), deleting files (delete_files), and the main function (main) that takes care of the entire analysis.  
-    
+
     - class JsonHandler = Class that takes care of json file repair. Fixes diacritics and formatting. The argument is a dictionary that is in json_address_handler.py. Contains methods repair_names(),repair_title(), repair_messages()  which repair specific parts of json data.
     - class JsonFile = Class that takes care of loading json files. The argument is a list of json file addresses. Combines multiple logs into single one. Contains method load_json.
     - class JsonAnalytics = Class that takes care of chatlog analysis. The argument is a dictionary, which is the result of the JsonFile class and its load_json() method. Contains methods: 
-    - chat_type() = Decide, whether it is a group chat or a chat between two people.
-    - count_messages() = Function that counts the number of messages from individual chat participants. 
-    - store_data() = Function that stores the results of the analysis in a dictionary.
-    - dates() = Function that returns dictionaries with dates, where the key is the participant's name and the value is a list where the first element is a list of dates and the second element is a list of the number of messages. 
-    - most_words() = Returns a dictionary where the key is the name of the chat participant and the value is a list of words that are sorted by the number of occurrences. n  = is the number of characters that a word must have to be included in the list. length = is the number of words that will be displayed. 
-    - moving_avarage() = Function that calculates the moving average of the number of messages for n days. The result is stored in a dictionary
+    - - chat_type() = Decide, whether it is a group chat or a chat between two people.
+    - - count_messages() = Function that counts the number of messages from individual chat participants. 
+    - - store_data() = Function that stores the results of the analysis in a dictionary.
+    - - dates() = Function that returns dictionaries with dates, where the key is the participant's name and the value is a list where the first element is a list of dates and the second element is a list of the number of messages. 
+    - - most_words() = Returns a dictionary where the key is the name of the chat participant and the value is a list of words that are sorted by the number of occurrences. n  = is the number of characters that a word must have to be included in the list. length = is the number of words that will be displayed. 
+    - - moving_avarage() = Function that calculates the moving average of the number of messages for n days. The result is stored in a dictionary
     where the key is the name of the chat participant and the value is a list of dates and the number of messages. 
     - class GeneralData = Class responsible for computing general data. Contains methods_ 
     - identify() = Function wich will try to identify your name. 
