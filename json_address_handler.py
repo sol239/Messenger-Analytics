@@ -16,7 +16,7 @@ def find_chats(path):
 
     # Searches for folders with chatlogs and adds them to the list.
     for folder in current_directory:
-        if "your_activity" in folder:
+        if "activity" in folder:
             path = path + "/" + folder
             current_directory = os.listdir(path)
             for folder in current_directory:
