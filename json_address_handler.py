@@ -35,7 +35,7 @@ def find_chats(path):
                             chat_logs = (os.listdir(path2))
                             for log in chat_logs:
                                 chat_adresses.append(path2 + "/" + log)
-                        if "e2ee_cutover" in str(folder):
+                        if "e2ee" in str(folder):
                             path3 = path + "/" + folder
                             chat_logs = (os.listdir(path3))
                             for log in chat_logs:
